@@ -2,24 +2,25 @@ package vue;
 
 import java.awt.Dimension;
 
-import javax.swing.*;
-import modele.*;
+import javax.swing.JFrame;
 
-public class Vue extends JFrame {
+import modele.Modele;
+
+public class VueRond extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	protected Modele modele;
-	protected HorlogeButton horloge;
+	protected HorlogeRond horloge;
 	
-	public Vue(Modele m) {
+	public VueRond(Modele m) {
 		super("Horloge Binaire");
 		
 		this.modele = m;
-		this.horloge = new HorlogeButton(this);
+		this.horloge = new HorlogeRond(this);
 	
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(true);
-		this.setSize(new Dimension(800,600));
+		this.setLocation(100, 100);
 		this.add(this.horloge);
 		this.pack();
 		this.setVisible(false);;

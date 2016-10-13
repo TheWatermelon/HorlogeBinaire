@@ -8,11 +8,11 @@ import javax.swing.*;
 
 import modele.*;
 
-class Horloge extends JPanel {
+class HorlogeButton extends JPanel {
 	protected Vue vue;
 	protected JButton[][] diodes;
 	
-	public Horloge(Vue v) {
+	public HorlogeButton(Vue v) {
 		super();
 		this.setLayout(new GridLayout(v.lireModele().lireLignes()+2, v.lireModele().lireColonnes()+2, 5, 5));
 		
